@@ -1,49 +1,55 @@
-<div align="center">
+=== WooCommerce Purchase Notifications ===
+Contributors: Antigravity
+Tags: woocommerce, purchase notifications, social proof, conversion optimization, sales notifications, live notifications, popup
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 8.0
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-# WooCommerce Purchase Notifications
+Boost your store conversion rates by showing authentic, elegant recent purchase notifications of the product currently being viewed using real-time WooCommerce order data.
 
-### Elegant • Authentic • Self-Hosted Social Proof for WooCommerce
+== Description ==
 
-Display beautiful, real purchase notifications powered directly by your WooCommerce order history.
+WooCommerce Purchase Notifications is a premium-quality, lightweight, and fully self-hosted social proof solution that displays authentic recent purchases on your product pages. 
 
-<br>
+By leveraging native order history, the plugin generates floating purchase notification cards that prove to visitors that your store has active, satisfied buyers. 
 
-![WordPress](https://img.shields.io/badge/WordPress-5.8+-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
-![WooCommerce](https://img.shields.io/badge/WooCommerce-Compatible-96588A?style=for-the-badge&logo=woocommerce&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Version](https://img.shields.io/badge/Version-1.0.0-success?style=for-the-badge)
-![License](https://img.shields.io/badge/License-GPL_v2+-green?style=for-the-badge)
+=== Key Features ===
+* **Fully Self-Hosted & Private**: Runs entirely on your own server. No external APIs, SaaS accounts, subscription fees, or monthly data limits.
+* **Current Product Context**: Dynamically filters notifications to display recent purchases of only the product currently being viewed, maintaining 100% authenticity.
+* **High Performance**: Asynchronous AJAX loading prevents page caching issues with caching suites (WP Rocket, LiteSpeed Cache, FlyingPress, W3 Total Cache). Server-side transient caching and client-side session storage prevent database overloading.
+* **Privacy Focused & GDPR Ready**: All name anonymization and location mapping is executed server-side. No customer-identifying data (PII) is sent to the client browser. Includes toggles for anonymous mode, location hiding, and automatic name obfuscation patterns.
+* **Extensive Visual Customization**: Change typography, background colors, accents, border radii, card shadow, spacing, and thumbnail sizes. Includes 8 distinct entry/exit animations (Fade, Slide Up/Down/Left/Right, Scale, Zoom, Bounce).
+* **Live Settings Preview**: A persistent, real-time preview dashboard in your WordPress admin panel displays appearance updates instantly as you tweak settings.
+* **Accessible (WCAG) & Responsive**: Optimized for keyboard access, screen readers (`aria-live`), and touch screens. Responsive toggles enable or disable notifications on mobile, tablet, or desktop.
+* **High-Performance Order Storage (HPOS) Ready**: Fully compatible with WooCommerce HPOS and custom database order tables.
 
-</div>
+== Installation ==
 
----
+1. Upload the plugin files to the `/wp-content/plugins/woocommerce-purchase-notifications` directory, or install the plugin directly through the WordPress plugins screen.
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. Navigate to WooCommerce -> Purchase Notifications to configure options.
 
-<p align="center">
-<img src="assets/banner.png" width="900">
-</p>
+== Frequently Asked Questions ==
 
----
+= Does this plugin work with caching systems? =
+Yes! The plugin loads notifications asynchronously via AJAX. This ensures cached HTML pages do not show stale, duplicate, or incorrect notifications.
 
-# ✨ Overview
+= Does this plugin comply with GDPR? =
+Yes! Under GDPR mode, all anonymization processes are executed on the server before data is sent to the frontend. No customer database identifiers, billing details, or private fields are sent to the user's browser.
 
-WooCommerce Purchase Notifications is a lightweight, privacy-first, fully self-hosted social proof plugin that displays elegant floating purchase notifications using **real WooCommerce order data**.
+= Does it support WooCommerce variations? =
+Yes! If a variation is purchased, the plugin detects the parent product ID and displays the parent product details along with its image and the relative purchase time.
 
-Unlike third-party SaaS solutions, everything runs on **your own WordPress installation**, giving you complete control over customer privacy, performance, and customization.
+== Screenshots ==
 
----
+1. Settings Panel Dashboard with Live Cards Preview.
+2. Visual configuration options including 6 responsive tabs.
+3. Real-time floating purchase card popup on WooCommerce single product pages.
 
-# 🚀 Why Choose This Plugin?
+== Changelog ==
 
-| Feature | Included |
-|---------|----------|
-| 100% Self-Hosted | ✅ |
-| No Monthly Fees | ✅ |
-| No External APIs | ✅ |
-| WooCommerce HPOS Support | ✅ |
-| AJAX Loading | ✅ |
-| GDPR Friendly | ✅ |
-| Live Preview | ✅ |
-| Responsive Design | ✅ |
-| Performance Optimized | ✅ |
-
----
+= 1.0.0 =
+* Initial release.
