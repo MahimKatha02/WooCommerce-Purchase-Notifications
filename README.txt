@@ -6,7 +6,7 @@ Tested up to: 7.0
 Requires PHP: 8.0
 Stable tag: 1.0.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Boost your store conversion rates by showing authentic, elegant recent purchase notifications of the product currently being viewed using real-time WooCommerce order data.
 

@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Antigravity Purchase Notifications for WooCommerce
- * Plugin URI:  https://github.com/example/antigravity-purchase-notifications-for-woocommerce
+ * Plugin URI:  https://github.com/MahimKatha02/antigravity-purchase-notifications
  * Description: Increases conversions by displaying authentic recent purchase notifications on product pages using WooCommerce order data.
  * Version:     1.0.0
  * Author:      Antigravity
- * Author URI:  https://github.com/example
+ * Author URI:  https://github.com/MahimKatha02
  * Text Domain: antigravity-purchase-notifications-for-woocommerce
  * Domain Path: /languages
  * Requires PHP: 8.0
