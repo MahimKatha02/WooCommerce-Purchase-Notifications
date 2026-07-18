@@ -27,18 +27,18 @@ class Ajax {
 	public function get_notifications() {
 		// Nonce verification.
 		if ( ! isset( $_GET['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['nonce'] ) ), 'wcpn-frontend-nonce' ) ) {
-			wp_send_json_error( [ 'message' => __( 'Security verification failed.', 'antigravity-purchase-notifications' ) ], 403 );
+			wp_send_json_error( [ 'message' => __( 'Security verification failed.', 'woocommerce-purchase-notifications' ) ], 403 );
 		}
 
 		// Product ID verification.
 		$product_id = isset( $_GET['product_id'] ) ? absint( $_GET['product_id'] ) : 0;
 		if ( ! $product_id ) {
-			wp_send_json_error( [ 'message' => __( 'Invalid product ID.', 'antigravity-purchase-notifications' ) ], 400 );
+			wp_send_json_error( [ 'message' => __( 'Invalid product ID.', 'woocommerce-purchase-notifications' ) ], 400 );
 		}
 
 		$product = wc_get_product( $product_id );
 		if ( ! $product ) {
-			wp_send_json_error( [ 'message' => __( 'Product not found.', 'antigravity-purchase-notifications' ) ], 404 );
+			wp_send_json_error( [ 'message' => __( 'Product not found.', 'woocommerce-purchase-notifications' ) ], 404 );
 		}
 
 		// Get option settings.

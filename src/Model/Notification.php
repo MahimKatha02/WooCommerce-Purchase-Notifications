@@ -67,7 +67,7 @@ class Notification {
 		if ( isset( $settings['privacy']['hide_locations'] ) && $settings['privacy']['hide_locations'] ) {
 			$customer_location = '';
 		} else {
-			$fallback = $settings['notification']['customer_location_fallback'] ?? __( 'Unknown Location', 'antigravity-purchase-notifications' );
+			$fallback = $settings['notification']['customer_location_fallback'] ?? __( 'Unknown Location', 'woocommerce-purchase-notifications' );
 			$customer_location = self::get_location( $order, $location_source, $fallback );
 		}
 
@@ -148,7 +148,7 @@ class Notification {
 		$last_name  = trim( $last_name );
 
 		if ( empty( $first_name ) ) {
-			return __( 'Someone', 'antigravity-purchase-notifications' );
+			return __( 'Someone', 'woocommerce-purchase-notifications' );
 		}
 
 		switch ( $mode ) {
@@ -166,7 +166,7 @@ class Notification {
 				return mb_substr( $first_name, 0, 1, 'UTF-8' ) . '.';
 
 			case 'Anonymous':
-				return __( 'Someone', 'antigravity-purchase-notifications' );
+				return __( 'Someone', 'woocommerce-purchase-notifications' );
 
 			case 'Hidden':
 			default:
@@ -204,14 +204,14 @@ class Notification {
 		$difference = time() - $timestamp;
 
 		if ( $difference < 60 ) {
-			return __( 'Just now', 'antigravity-purchase-notifications' );
+			return __( 'Just now', 'woocommerce-purchase-notifications' );
 		}
 
 		$minutes = round( $difference / MINUTE_IN_SECONDS );
 		if ( $minutes < 60 ) {
 			return sprintf(
 				/* translators: %d: number of minutes */
-				_n( '%d minute ago', '%d minutes ago', $minutes, 'antigravity-purchase-notifications' ),
+				_n( '%d minute ago', '%d minutes ago', $minutes, 'woocommerce-purchase-notifications' ),
 				$minutes
 			);
 		}
@@ -220,33 +220,33 @@ class Notification {
 		if ( $hours < 24 ) {
 			return sprintf(
 				/* translators: %d: number of hours */
-				_n( '%d hour ago', '%d hours ago', $hours, 'antigravity-purchase-notifications' ),
+				_n( '%d hour ago', '%d hours ago', $hours, 'woocommerce-purchase-notifications' ),
 				$hours
 			);
 		}
 
 		$days = round( $difference / DAY_IN_SECONDS );
 		if ( 1 === (int) $days ) {
-			return __( 'Yesterday', 'antigravity-purchase-notifications' );
+			return __( 'Yesterday', 'woocommerce-purchase-notifications' );
 		}
 
 		if ( $days < 7 ) {
 			return sprintf(
 				/* translators: %d: number of days */
-				_n( '%d day ago', '%d days ago', $days, 'antigravity-purchase-notifications' ),
+				_n( '%d day ago', '%d days ago', $days, 'woocommerce-purchase-notifications' ),
 				$days
 			);
 		}
 
 		$weeks = round( $difference / ( 7 * DAY_IN_SECONDS ) );
 		if ( 1 === (int) $weeks ) {
-			return __( 'Last week', 'antigravity-purchase-notifications' );
+			return __( 'Last week', 'woocommerce-purchase-notifications' );
 		}
 
 		if ( $weeks < 4 ) {
 			return sprintf(
 				/* translators: %d: number of weeks */
-				_n( '%d week ago', '%d weeks ago', $weeks, 'antigravity-purchase-notifications' ),
+				_n( '%d week ago', '%d weeks ago', $weeks, 'woocommerce-purchase-notifications' ),
 				$weeks
 			);
 		}
@@ -254,7 +254,7 @@ class Notification {
 		$months = round( $difference / ( 30 * DAY_IN_SECONDS ) );
 		return sprintf(
 			/* translators: %d: number of months */
-			_n( '%d month ago', '%d months ago', $months, 'antigravity-purchase-notifications' ),
+			_n( '%d month ago', '%d months ago', $months, 'woocommerce-purchase-notifications' ),
 			$months
 		);
 	}
