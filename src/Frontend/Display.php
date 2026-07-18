@@ -1,5 +1,5 @@
 <?php
-namespace WooCommercePurchaseNotifications\Frontend;
+namespace AntigravityPurchaseNotifications\Frontend;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

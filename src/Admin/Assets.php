@@ -1,5 +1,5 @@
 <?php
-namespace WooCommercePurchaseNotifications\Admin;
+namespace AntigravityPurchaseNotifications\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -23,7 +23,7 @@ class Assets {
 	 * @param string $hook The current admin page hook.
 	 */
 	public function enqueue_admin_assets( string $hook ) {
-		// Enqueue exclusively on the WooCommerce Purchase Notifications submenu settings page.
+		// Enqueue exclusively on the antigravity-purchase-notifications submenu settings page.
 		if ( 'woocommerce_page_wcpn-settings' !== $hook ) {
 			return;
 		}

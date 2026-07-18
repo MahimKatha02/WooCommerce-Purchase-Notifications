@@ -1,16 +1,16 @@
 /**
- * Admin Javascript driver for WooCommerce Purchase Notifications settings panel.
+ * Admin Javascript driver for Antigravity Purchase Notifications for WooCommerce settings panel.
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
 	// 1. Sidebar Tab Switching Logic
-	$('.wcpn-tab-item').on('click', function() {
+	$('.wcpn-tab-item').on('click', function () {
 		var targetTab = $(this).data('tab');
-		
+
 		// Remove active classes
 		$('.wcpn-tab-item').removeClass('active');
 		$('.wcpn-tab-content').removeClass('active');
-		
+
 		// Set active tab
 		$(this).addClass('active');
 		$('#tab-' + targetTab).addClass('active');
@@ -18,20 +18,20 @@ jQuery(document).ready(function($) {
 
 	// 2. Real-time Live Preview Engine
 	var $previewCard = $('#wcpn-card-preview-element');
-	
+
 	function updatePreviewStyles() {
 		// Appearance field values
-		var bgColor      = $('input[name="wcpn_settings[appearance][background_color]"]').val();
-		var textColor    = $('input[name="wcpn_settings[appearance][text_color]"]').val();
-		var accentColor  = $('input[name="wcpn_settings[appearance][accent_color]"]').val();
+		var bgColor = $('input[name="wcpn_settings[appearance][background_color]"]').val();
+		var textColor = $('input[name="wcpn_settings[appearance][text_color]"]').val();
+		var accentColor = $('input[name="wcpn_settings[appearance][accent_color]"]').val();
 		var borderRadius = $('input[name="wcpn_settings[appearance][border_radius]"]').val();
-		var borderStyle  = $('input[name="wcpn_settings[appearance][border]"]').val();
-		var shadowStyle  = $('input[name="wcpn_settings[appearance][shadow]"]').val();
+		var borderStyle = $('input[name="wcpn_settings[appearance][border]"]').val();
+		var shadowStyle = $('input[name="wcpn_settings[appearance][shadow]"]').val();
 		var paddingStyle = $('input[name="wcpn_settings[appearance][padding]"]').val();
-		var fontFamily   = $('input[name="wcpn_settings[appearance][font_family]"]').val();
-		var fontSize     = $('input[name="wcpn_settings[appearance][font_size]"]').val();
-		var cardWidth    = $('input[name="wcpn_settings[appearance][notification_width]"]').val();
-		var imageSize    = $('input[name="wcpn_settings[appearance][image_size]"]').val();
+		var fontFamily = $('input[name="wcpn_settings[appearance][font_family]"]').val();
+		var fontSize = $('input[name="wcpn_settings[appearance][font_size]"]').val();
+		var cardWidth = $('input[name="wcpn_settings[appearance][notification_width]"]').val();
+		var imageSize = $('input[name="wcpn_settings[appearance][image_size]"]').val();
 
 		// Apply CSS properties to the preview element
 		$previewCard.css({
@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
 		$previewCard.find('.wcpn-preview-name-span, .wcpn-preview-loc-span, .wcpn-preview-qty-span, .wcpn-preview-prod-span, .wcpn-preview-verified-badge').css({
 			'color': accentColor
 		});
-		
+
 		$previewCard.find('.wcpn-verified-svg').css({
 			'stroke': accentColor
 		});
@@ -82,15 +82,15 @@ jQuery(document).ready(function($) {
 	}
 
 	function updatePreviewText() {
-		var templateText   = $('textarea[name="wcpn_settings[display][custom_notification_template]"]').val();
-		var namePrivacy    = $('#wcpn-customer-name-mode').val();
-		var anonMode       = $('input[name="wcpn_settings[privacy][anonymous_mode]"]').is(':checked');
-		var hideNames      = $('input[name="wcpn_settings[privacy][hide_customer_names]"]').is(':checked');
-		var hideLocs       = $('input[name="wcpn_settings[privacy][hide_locations]"]').is(':checked');
-		var hideQty        = $('input[name="wcpn_settings[privacy][hide_quantity]"]').is(':checked');
-		var hideTime       = $('input[name="wcpn_settings[privacy][hide_purchase_time]"]').is(':checked');
+		var templateText = $('textarea[name="wcpn_settings[display][custom_notification_template]"]').val();
+		var namePrivacy = $('#wcpn-customer-name-mode').val();
+		var anonMode = $('input[name="wcpn_settings[privacy][anonymous_mode]"]').is(':checked');
+		var hideNames = $('input[name="wcpn_settings[privacy][hide_customer_names]"]').is(':checked');
+		var hideLocs = $('input[name="wcpn_settings[privacy][hide_locations]"]').is(':checked');
+		var hideQty = $('input[name="wcpn_settings[privacy][hide_quantity]"]').is(':checked');
+		var hideTime = $('input[name="wcpn_settings[privacy][hide_purchase_time]"]').is(':checked');
 		var locationSource = $('select[name="wcpn_settings[notification][customer_location_source]"]').val();
-		var fallbackText   = $('input[name="wcpn_settings[notification][customer_location_fallback]"]').val();
+		var fallbackText = $('input[name="wcpn_settings[notification][customer_location_fallback]"]').val();
 
 		// Mock details
 		var customerName = "John D.";
@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
 		}
 
 		var quantity = hideQty ? "" : "1x";
-		var timeAgo  = hideTime ? "" : "5 minutes ago";
+		var timeAgo = hideTime ? "" : "5 minutes ago";
 		var productName = "Premium Leather Wallet";
 
 		var replacements = {
@@ -122,7 +122,7 @@ jQuery(document).ready(function($) {
 		};
 
 		var text = templateText;
-		$.each(replacements, function(placeholder, val) {
+		$.each(replacements, function (placeholder, val) {
 			text = text.replace(new RegExp(placeholder, 'g'), val);
 		});
 
@@ -134,7 +134,7 @@ jQuery(document).ready(function($) {
 		text = text.trim();
 
 		$previewCard.find('.wcpn-preview-text').html(text);
-		
+
 		// Apply dynamic colors to the new elements
 		var accentColor = $('input[name="wcpn_settings[appearance][accent_color]"]').val();
 		$previewCard.find('.wcpn-preview-name-span, .wcpn-preview-loc-span, .wcpn-preview-qty-span, .wcpn-preview-prod-span').css({
@@ -144,38 +144,38 @@ jQuery(document).ready(function($) {
 
 	// Hook color pickers changes
 	$('.wcpn-color-picker').wpColorPicker({
-		change: function(event, ui) {
+		change: function (event, ui) {
 			// Small timeout because color value takes a millisecond to update in input val
-			setTimeout(function() {
+			setTimeout(function () {
 				updatePreviewStyles();
 			}, 10);
 		},
-		clear: function() {
-			setTimeout(function() {
+		clear: function () {
+			setTimeout(function () {
 				updatePreviewStyles();
 			}, 10);
 		}
 	});
 
 	// Hook general inputs
-	$('.wcpn-settings-form input, .wcpn-settings-form select, .wcpn-settings-form textarea').on('input change', function() {
+	$('.wcpn-settings-form input, .wcpn-settings-form select, .wcpn-settings-form textarea').on('input change', function () {
 		updatePreviewStyles();
 	});
 
 	// Trigger preview tests animations
-	$('#wcpn-btn-animate-preview').on('click', function() {
+	$('#wcpn-btn-animate-preview').on('click', function () {
 		var animation = $('#wcpn-setting-animation-type').val().toLowerCase().replace(' ', '-');
-		
+
 		// Map some animations to classes or css triggers
 		$previewCard.removeClass('wcpn-anim-bounce');
-		
+
 		if (animation === 'bounce') {
 			// Trigger keyframe bounce
 			$previewCard.addClass('wcpn-anim-bounce');
 		} else {
 			// Trigger a quick slide/fade visual toggle
 			$previewCard.css({ 'opacity': 0, 'transform': 'scale(0.95)' });
-			setTimeout(function() {
+			setTimeout(function () {
 				$previewCard.css({ 'opacity': 1, 'transform': 'scale(1)' });
 			}, 150);
 		}

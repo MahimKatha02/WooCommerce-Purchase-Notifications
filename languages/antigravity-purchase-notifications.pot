@@ -1,8 +1,8 @@
 # Copyright (C) 2026 Antigravity
-# This file is distributed under the same license as the WooCommerce Purchase Notifications plugin.
+# This file is distributed under the same license as the antigravity-purchase-notifications plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Purchase Notifications 1.0.0\n"
+"Project-Id-Version: antigravity-purchase-notifications 1.0.0\n"
 "Report-Msgid-Bugs-To: https://example.com\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,14 +12,14 @@ msgstr ""
 "POT-Creation-Date: 2026-07-18T16:32:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI\n"
-"X-Domain: woocommerce-purchase-notifications\n"
+"X-Domain: antigravity-purchase-notifications\n"
 
-#: woocommerce-purchase-notifications.php:68
-msgid "WooCommerce Purchase Notifications requires PHP 8.0 or higher to function properly. Please upgrade your PHP version."
+#: antigravity-purchase-notifications.php:68
+msgid "antigravity-purchase-notifications requires PHP 8.0 or higher to function properly. Please upgrade your PHP version."
 msgstr ""
 
-#: woocommerce-purchase-notifications.php:79
-msgid "WooCommerce Purchase Notifications requires WooCommerce to be active."
+#: antigravity-purchase-notifications.php:79
+msgid "antigravity-purchase-notifications requires WooCommerce to be active."
 msgstr ""
 
 #: src/Frontend/Ajax.php:26

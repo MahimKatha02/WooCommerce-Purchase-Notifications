@@ -1,5 +1,5 @@
 /**
- * Admin Stylesheet for WooCommerce Purchase Notifications
+ * Admin Stylesheet for antigravity-purchase-notifications
  */
 
 /* Color system & variables */
@@ -24,7 +24,7 @@
 	background: var(--wcpn-card-bg);
 	border-radius: 12px;
 	padding: 24px 30px;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 	margin-bottom: 24px;
 	border: 1px solid var(--wcpn-border-color);
 }
@@ -69,6 +69,7 @@
 	.wcpn-dashboard-layout {
 		grid-template-columns: 240px 1fr;
 	}
+
 	.wcpn-preview-column {
 		grid-column: span 2;
 	}
@@ -78,7 +79,9 @@
 	.wcpn-dashboard-layout {
 		grid-template-columns: 1fr;
 	}
-	.wcpn-preview-column, .wcpn-sidebar {
+
+	.wcpn-preview-column,
+	.wcpn-sidebar {
 		grid-column: span 1;
 	}
 }
@@ -88,7 +91,7 @@
 	background: var(--wcpn-card-bg);
 	border-radius: 12px;
 	border: 1px solid var(--wcpn-border-color);
-	box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 	overflow: hidden;
 }
 
@@ -156,7 +159,8 @@
 
 /* Card components & form fields */
 .wcpn-content {
-	min-width: 0; /* Prevents flex blowout */
+	min-width: 0;
+	/* Prevents flex blowout */
 }
 
 .wcpn-tab-content {
@@ -171,7 +175,7 @@
 	background: var(--wcpn-card-bg);
 	border-radius: 12px;
 	border: 1px solid var(--wcpn-border-color);
-	box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 	padding: 30px;
 }
 
@@ -229,7 +233,7 @@
 	font-size: 13px;
 	color: var(--wcpn-text-dark);
 	background: #fff;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
 	transition: border-color 0.15s ease-in-out;
 }
 
@@ -259,7 +263,8 @@
 }
 
 /* Custom Checkbox lists and grid */
-.wcpn-checkbox-list, .wcpn-checkbox-grid {
+.wcpn-checkbox-list,
+.wcpn-checkbox-grid {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -270,7 +275,8 @@
 	gap: 20px;
 }
 
-.wcpn-checkbox-list label, .wcpn-checkbox-grid label {
+.wcpn-checkbox-list label,
+.wcpn-checkbox-grid label {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
@@ -279,7 +285,8 @@
 	cursor: pointer;
 }
 
-.wcpn-checkbox-list input[type="checkbox"], .wcpn-checkbox-grid input[type="checkbox"] {
+.wcpn-checkbox-list input[type="checkbox"],
+.wcpn-checkbox-grid input[type="checkbox"] {
 	margin: 0;
 	border-radius: 3px;
 	border-color: var(--wcpn-border-color);
@@ -322,14 +329,14 @@
 	background-color: white;
 	transition: .2s;
 	border-radius: 50%;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.wcpn-switch input:checked + .wcpn-slider {
+.wcpn-switch input:checked+.wcpn-slider {
 	background-color: var(--wcpn-primary);
 }
 
-.wcpn-switch input:checked + .wcpn-slider:before {
+.wcpn-switch input:checked+.wcpn-slider:before {
 	transform: translateX(20px);
 }
 
@@ -353,7 +360,7 @@
 	background: var(--wcpn-card-bg);
 	border-radius: 12px;
 	border: 1px solid var(--wcpn-border-color);
-	box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 	padding: 24px;
 }
 
@@ -469,10 +476,27 @@
 
 /* Animations keys for preview testing */
 @keyframes wcpn-preview-bounce {
-	0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
-	40%, 43% { transform: translateY(-30px); }
-	70% { transform: translateY(-15px); }
-	90% { transform: translateY(-4px); }
+
+	0%,
+	20%,
+	53%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+
+	40%,
+	43% {
+		transform: translateY(-30px);
+	}
+
+	70% {
+		transform: translateY(-15px);
+	}
+
+	90% {
+		transform: translateY(-4px);
+	}
 }
 
 .wcpn-anim-bounce {

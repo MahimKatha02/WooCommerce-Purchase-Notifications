@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: WooCommerce Purchase Notifications
- * Plugin URI:  https://github.com/example/woocommerce-purchase-notifications
+ * Plugin Name: Antigravity Purchase Notifications for WooCommerce
+ * Plugin URI:  https://github.com/example/antigravity-purchase-notifications
  * Description: Increases conversions by displaying authentic recent purchase notifications on product pages using WooCommerce order data.
  * Version:     1.0.0
  * Author:      Antigravity
  * Author URI:  https://github.com/example
- * Text Domain: woocommerce-purchase-notifications
+ * Text Domain: antigravity-purchase-notifications
  * Domain Path: /languages
  * Requires PHP: 8.0
  * Requires at least: 5.8
@@ -14,7 +14,7 @@
  * WC tested up to: 8.5
  * License:     GPL-2.0+
  *
- * @package WooCommercePurchaseNotifications
+ * @package AntigravityPurchaseNotifications
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ define( 'WCPN_VERSION', '1.0.0' );
 define( 'WCPN_PLUGIN_FILE', __FILE__ );
 define( 'WCPN_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WCPN_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'WCPN_TEXT_DOMAIN', 'woocommerce-purchase-notifications' );
+define( 'WCPN_TEXT_DOMAIN', 'antigravity-purchase-notifications' );
 
 /**
  * Register PSR-4 Autoloader.
@@ -57,7 +57,7 @@ function wcpn_initialize() {
 		add_action( 'admin_notices', function () {
 			?>
 			<div class="notice notice-error is-dismissible">
-				<p><?php esc_html_e( 'WooCommerce Purchase Notifications requires PHP 8.0 or higher to function properly. Please upgrade your PHP version.', 'woocommerce-purchase-notifications' ); ?></p>
+				<p><?php esc_html_e( 'antigravity-purchase-notifications' requires PHP 8.0 or higher to function properly. Please upgrade your PHP version.', 'antigravity-purchase-notifications' ); ?></p>
 			</div>
 			<?php
 		} );
@@ -69,7 +69,7 @@ function wcpn_initialize() {
 		add_action( 'admin_notices', function () {
 			?>
 			<div class="notice notice-warning is-dismissible">
-				<p><?php esc_html_e( 'WooCommerce Purchase Notifications requires WooCommerce to be active.', 'woocommerce-purchase-notifications' ); ?></p>
+				<p><?php esc_html_e( 'antigravity-purchase-notifications requires WooCommerce to be active.', 'antigravity-purchase-notifications' ); ?></p>
 			</div>
 			<?php
 		} );

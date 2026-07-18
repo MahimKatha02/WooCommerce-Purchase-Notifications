@@ -1,7 +1,7 @@
 /**
- * Frontend JavaScript driver for WooCommerce Purchase Notifications
+ * Frontend JavaScript driver for antigravity-purchase-notifications
  */
-(function($) {
+(function ($) {
 	'use strict';
 
 	// Exit if core configurations are missing
@@ -84,18 +84,18 @@
 				nonce: config.nonce,
 				product_id: config.product_id
 			},
-			success: function(response) {
+			success: function (response) {
 				if (response.success && response.data && response.data.length > 0) {
 					queue = response.data;
-					
+
 					// Randomize/shuffle notifications to prevent duplicate patterns
 					queue = shuffleArray(queue);
-					
+
 					// Save to browser sessionStorage
 					try {
 						sessionStorage.setItem('wcpn_notif_' + config.product_id, JSON.stringify(queue));
-					} catch(e) {}
-					
+					} catch (e) { }
+
 					startNotificationCycle();
 				}
 			}
@@ -116,7 +116,7 @@
 	// Starts the timer loops
 	function startNotificationCycle() {
 		// Show first card after the initial display delay
-		setTimeout(function() {
+		setTimeout(function () {
 			if (isTabActive) {
 				showNextNotification();
 			}
@@ -139,7 +139,7 @@
 
 		// Create DOM elements
 		var cardHtml = '<a href="' + notification.permalink + '" class="wcpn-card wcpn-dark-theme wcpn-anim-' + config.animation_type + '" id="wcpn-active-card">';
-		
+
 		// 1. Close/Dismiss button
 		if (config.dismissible) {
 			cardHtml += '<button type="button" class="wcpn-close" aria-label="Dismiss notification">&times;</button>';
@@ -152,7 +152,7 @@
 
 		// 3. Body
 		cardHtml += '<div class="wcpn-body"><p class="wcpn-text">' + notification.text + '</p>';
-		
+
 		// 4. Verified Badge
 		if (notification.verified) {
 			cardHtml += '<div class="wcpn-verified">';
@@ -160,7 +160,7 @@
 			cardHtml += '<span>Verified Purchase</span>';
 			cardHtml += '</div>';
 		}
-		
+
 		cardHtml += '</div></a>';
 
 		var $container = $('#wcpn-notification-container');
@@ -169,12 +169,12 @@
 		}
 
 		// Remove any existing card first
-		removeActiveCard(function() {
+		removeActiveCard(function () {
 			currentCardElement = $(cardHtml);
 			$container.append(currentCardElement);
 
 			// Register close button click action
-			currentCardElement.find('.wcpn-close').on('click', function(e) {
+			currentCardElement.find('.wcpn-close').on('click', function (e) {
 				e.preventDefault();
 				e.stopPropagation();
 				dismissCycle();
@@ -187,7 +187,7 @@
 			}
 
 			// Small timeout to trigger entry animation transition
-			setTimeout(function() {
+			setTimeout(function () {
 				if (currentCardElement) {
 					currentCardElement.addClass('wcpn-enter');
 				}
@@ -205,8 +205,8 @@
 			return;
 		}
 
-		rotationTimer = setTimeout(function() {
-			removeActiveCard(function() {
+		rotationTimer = setTimeout(function () {
+			removeActiveCard(function () {
 				showNextNotification();
 			});
 		}, config.rotation_interval);
@@ -221,9 +221,9 @@
 		}
 
 		$activeCard.removeClass('wcpn-enter').addClass('wcpn-exit');
-		
+
 		// Wait for animation duration before removing from DOM
-		setTimeout(function() {
+		setTimeout(function () {
 			$activeCard.remove();
 			currentCardElement = null;
 			if (callback) callback();
