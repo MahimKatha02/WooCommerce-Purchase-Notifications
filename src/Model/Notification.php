@@ -1,5 +1,5 @@
 <?php
-namespace AntigravityPurchaseNotifications\Model;
+namespace WooCommercePurchaseNotifications\Model;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -67,7 +67,7 @@ class Notification {
 		if ( isset( $settings['privacy']['hide_locations'] ) && $settings['privacy']['hide_locations'] ) {
 			$customer_location = '';
 		} else {
-			$fallback = $settings['notification']['customer_location_fallback'] ?? __( 'Unknown Location', 'woocommerce-purchase-notifications' );
+			$fallback = $settings['notification']['customer_location_fallback'] ?? __( 'Unknown Location', 'WooCommerce-Purchase-Notifications' );
 			$customer_location = self::get_location( $order, $location_source, $fallback );
 		}
 
@@ -148,7 +148,7 @@ class Notification {
 		$last_name  = trim( $last_name );
 
 		if ( empty( $first_name ) ) {
-			return __( 'Someone', 'woocommerce-purchase-notifications' );
+			return __( 'Someone', 'WooCommerce-Purchase-Notifications' );
 		}
 
 		switch ( $mode ) {
@@ -166,7 +166,7 @@ class Notification {
 				return mb_substr( $first_name, 0, 1, 'UTF-8' ) . '.';
 
 			case 'Anonymous':
-				return __( 'Someone', 'woocommerce-purchase-notifications' );
+				return __( 'Someone', 'WooCommerce-Purchase-Notifications' );
 
 			case 'Hidden':
 			default:
@@ -204,14 +204,14 @@ class Notification {
 		$difference = time() - $timestamp;
 
 		if ( $difference < 60 ) {
-			return __( 'Just now', 'woocommerce-purchase-notifications' );
+			return __( 'Just now', 'WooCommerce-Purchase-Notifications' );
 		}
 
 		$minutes = round( $difference / MINUTE_IN_SECONDS );
 		if ( $minutes < 60 ) {
 			return sprintf(
 				/* translators: %d: number of minutes */
-				_n( '%d minute ago', '%d minutes ago', $minutes, 'woocommerce-purchase-notifications' ),
+				_n( '%d minute ago', '%d minutes ago', $minutes, 'WooCommerce-Purchase-Notifications' ),
 				$minutes
 			);
 		}
@@ -220,33 +220,33 @@ class Notification {
 		if ( $hours < 24 ) {
 			return sprintf(
 				/* translators: %d: number of hours */
-				_n( '%d hour ago', '%d hours ago', $hours, 'woocommerce-purchase-notifications' ),
+				_n( '%d hour ago', '%d hours ago', $hours, 'WooCommerce-Purchase-Notifications' ),
 				$hours
 			);
 		}
 
 		$days = round( $difference / DAY_IN_SECONDS );
 		if ( 1 === (int) $days ) {
-			return __( 'Yesterday', 'woocommerce-purchase-notifications' );
+			return __( 'Yesterday', 'WooCommerce-Purchase-Notifications' );
 		}
 
 		if ( $days < 7 ) {
 			return sprintf(
 				/* translators: %d: number of days */
-				_n( '%d day ago', '%d days ago', $days, 'woocommerce-purchase-notifications' ),
+				_n( '%d day ago', '%d days ago', $days, 'WooCommerce-Purchase-Notifications' ),
 				$days
 			);
 		}
 
 		$weeks = round( $difference / ( 7 * DAY_IN_SECONDS ) );
 		if ( 1 === (int) $weeks ) {
-			return __( 'Last week', 'woocommerce-purchase-notifications' );
+			return __( 'Last week', 'WooCommerce-Purchase-Notifications' );
 		}
 
 		if ( $weeks < 4 ) {
 			return sprintf(
 				/* translators: %d: number of weeks */
-				_n( '%d week ago', '%d weeks ago', $weeks, 'woocommerce-purchase-notifications' ),
+				_n( '%d week ago', '%d weeks ago', $weeks, 'WooCommerce-Purchase-Notifications' ),
 				$weeks
 			);
 		}
@@ -254,7 +254,7 @@ class Notification {
 		$months = round( $difference / ( 30 * DAY_IN_SECONDS ) );
 		return sprintf(
 			/* translators: %d: number of months */
-			_n( '%d month ago', '%d months ago', $months, 'woocommerce-purchase-notifications' ),
+			_n( '%d month ago', '%d months ago', $months, 'WooCommerce-Purchase-Notifications' ),
 			$months
 		);
 	}

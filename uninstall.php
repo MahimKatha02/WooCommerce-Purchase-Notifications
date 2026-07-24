@@ -1,6 +1,6 @@
 <?php
 /**
- * antigravity-purchase-notifications Uninstall
+ * WooCommerce-Purchase-Notifications Uninstall
  *
  * @package WooCommercePurchaseNotifications
  */

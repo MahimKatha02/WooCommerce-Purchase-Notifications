@@ -1,5 +1,5 @@
 /**
- * Frontend JavaScript driver for WooCommerce-purchase-notifications
+ * Frontend JavaScript driver for WooCommerce-Purchase-Notifications
  */
 (function ($) {
 	'use strict';

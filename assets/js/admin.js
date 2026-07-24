@@ -1,5 +1,5 @@
 /**
- * Admin Javascript driver for Antigravity Purchase Notifications for WooCommerce settings panel.
+ * Admin Javascript driver for WooCommerce Purchase Notifications for WooCommerce settings panel.
  */
 jQuery(document).ready(function ($) {
 

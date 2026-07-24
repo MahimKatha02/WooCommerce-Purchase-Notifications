@@ -1,5 +1,5 @@
 === WooCommerce Purchase Notifications ===
-Contributors: Antigravity
+Contributors: WooCommerce
 Tags: woocommerce, purchase notifications, social proof, conversion optimization, sales notifications, live notifications, popup
 Requires at least: 5.8
 Tested up to: 7.0
@@ -28,7 +28,7 @@ By leveraging native order history, the plugin generates floating purchase notif
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/WooCommerce-purchase-notifications` directory, or install the plugin directly through the WordPress plugins screen.
+1. Upload the plugin files to the `/wp-content/plugins/WooCommerce-Purchase-Notifications` directory, or install the plugin directly through the WordPress plugins screen.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Navigate to WooCommerce -> Purchase Notifications to configure options.
 

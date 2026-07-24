@@ -113,8 +113,8 @@ class Settings {
 	public function add_settings_page() {
 		add_submenu_page(
 			'woocommerce',
-			__( 'Purchase Notifications', 'woocommerce-purchase-notifications' ),
-			__( 'Purchase Notifications', 'woocommerce-purchase-notifications' ),
+			__( 'Purchase Notifications', 'WooCommerce-Purchase-Notifications' ),
+			__( 'Purchase Notifications', 'WooCommerce-Purchase-Notifications' ),
 			'manage_woocommerce',
 			'wcpn-settings',
 			[ $this, 'render_settings_page' ]
@@ -245,10 +245,10 @@ class Settings {
 		<div class="wrap wcpn-admin-wrap">
 			<div class="wcpn-dashboard-header">
 				<div class="wcpn-brand">
-					<h1><?php esc_html_e( 'Purchase Notifications', 'WooCommerce-purchase-notifications' ); ?></h1>
+					<h1><?php esc_html_e( 'Purchase Notifications', 'WooCommerce-Purchase-Notifications' ); ?></h1>
 					<span class="wcpn-version">v<?php echo esc_html( WCPN_VERSION ); ?></span>
 				</div>
-				<p class="wcpn-description"><?php esc_html_e( 'Display real-time recent order notifications to improve conversions using authentic shop data.', 'woocommerce-purchase-notifications' ); ?></p>
+				<p class="wcpn-description"><?php esc_html_e( 'Display real-time recent order notifications to improve conversions using authentic shop data.', 'WooCommerce-Purchase-Notifications' ); ?></p>
 			</div>
 
 			<form method="post" action="options.php" class="wcpn-settings-form">
@@ -259,27 +259,27 @@ class Settings {
 					<div class="wcpn-sidebar">
 						<ul class="wcpn-tabs">
 							<li class="wcpn-tab-item active" data-tab="general">
-								<span class="dashicons dashicons-admin-generic"></span> <?php esc_html_e( 'General Settings', 'woocommerce-purchase-notifications' ); ?>
+								<span class="dashicons dashicons-admin-generic"></span> <?php esc_html_e( 'General Settings', 'WooCommerce-Purchase-Notifications' ); ?>
 							</li>
 							<li class="wcpn-tab-item" data-tab="display">
-								<span class="dashicons dashicons-visibility"></span> <?php esc_html_e( 'Display Rules', 'woocommerce-purchase-notifications' ); ?>
+								<span class="dashicons dashicons-visibility"></span> <?php esc_html_e( 'Display Rules', 'WooCommerce-Purchase-Notifications' ); ?>
 							</li>
 							<li class="wcpn-tab-item" data-tab="privacy">
-								<span class="dashicons dashicons-shield"></span> <?php esc_html_e( 'Privacy & GDPR', 'woocommerce-purchase-notifications' ); ?>
+								<span class="dashicons dashicons-shield"></span> <?php esc_html_e( 'Privacy & GDPR', 'WooCommerce-Purchase-Notifications' ); ?>
 							</li>
 							<li class="wcpn-tab-item" data-tab="filters">
-								<span class="dashicons dashicons-filter"></span> <?php esc_html_e( 'Product Filters', 'woocommerce-purchase-notifications' ); ?>
+								<span class="dashicons dashicons-filter"></span> <?php esc_html_e( 'Product Filters', 'WooCommerce-Purchase-Notifications' ); ?>
 							</li>
 							<li class="wcpn-tab-item" data-tab="orders">
-								<span class="dashicons dashicons-cart"></span> <?php esc_html_e( 'Order Filters', 'woocommerce-purchase-notifications' ); ?>
+								<span class="dashicons dashicons-cart"></span> <?php esc_html_e( 'Order Filters', 'WooCommerce-Purchase-Notifications' ); ?>
 							</li>
 							<li class="wcpn-tab-item" data-tab="appearance">
-								<span class="dashicons dashicons-art"></span> <?php esc_html_e( 'Appearance', 'woocommerce-purchase-notifications' ); ?>
+								<span class="dashicons dashicons-art"></span> <?php esc_html_e( 'Appearance', 'WooCommerce-Purchase-Notifications' ); ?>
 							</li>
 						</ul>
 						
 						<div class="wcpn-actions">
-							<?php submit_button( __( 'Save Settings', 'woocommerce-purchase-notifications' ), 'primary wcpn-submit-btn' ); ?>
+							<?php submit_button( __( 'Save Settings', 'WooCommerce-Purchase-Notifications' ), 'primary wcpn-submit-btn' ); ?>
 						</div>
 					</div>
 
@@ -289,39 +289,39 @@ class Settings {
 						<!-- TAB 1: GENERAL -->
 						<div class="wcpn-tab-content active" id="tab-general">
 							<div class="wcpn-card">
-								<h2><?php esc_html_e( 'Core Configuration', 'woocommerce-purchase-notifications' ); ?></h2>
+								<h2><?php esc_html_e( 'Core Configuration', 'WooCommerce-Purchase-Notifications' ); ?></h2>
 								
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Enable Plugin', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Enable Plugin', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<label class="wcpn-switch">
 											<input type="checkbox" name="wcpn_settings[general][enable_plugin]" value="1" <?php checked( $settings['general']['enable_plugin'], 1 ); ?>>
 											<span class="wcpn-slider"></span>
 										</label>
-										<span class="description"><?php esc_html_e( 'Activate purchase notifications across product pages.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Activate purchase notifications across product pages.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Device Compatibility', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Device Compatibility', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-grid">
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][enable_desktop]" value="1" <?php checked( $settings['general']['enable_desktop'], 1 ); ?>>
-											<?php esc_html_e( 'Desktop', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Desktop', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][enable_tablet]" value="1" <?php checked( $settings['general']['enable_tablet'], 1 ); ?>>
-											<?php esc_html_e( 'Tablet', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Tablet', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][enable_mobile]" value="1" <?php checked( $settings['general']['enable_mobile'], 1 ); ?>>
-											<?php esc_html_e( 'Mobile', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Mobile', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Notification Position', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Notification Position', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<select name="wcpn_settings[general][notification_position]">
 											<?php
@@ -335,26 +335,26 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Display Delay', 'WooCommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Display Delay', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][display_delay]" value="<?php echo esc_attr( $settings['general']['display_delay'] ); ?>" min="0">
-										<span class="description"><?php esc_html_e( 'Seconds to wait before showing the first notification card.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Seconds to wait before showing the first notification card.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Rotation Interval', 'WooCommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Rotation Interval', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][rotation_interval]" value="<?php echo esc_attr( $settings['general']['rotation_interval'] ); ?>" min="1">
-										<span class="description"><?php esc_html_e( 'Seconds to show each notification card before shifting to the next.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Seconds to show each notification card before shifting to the next.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Animation Speed', 'WooCommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Animation Speed', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][animation_speed]" value="<?php echo esc_attr( $settings['general']['animation_speed'] ); ?>" min="100"> ms
-										<span class="description"><?php esc_html_e( 'Transition duration for entry and exit animations (default 500ms).', 'WooCommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Transition duration for entry and exit animations (default 500ms).', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
@@ -362,28 +362,28 @@ class Settings {
 									<label class="wcpn-label"><?php esc_html_e( 'Maximum Notifications', '' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][maximum_notifications]" value="<?php echo esc_attr( $settings['general']['maximum_notifications'] ); ?>" min="1">
-										<span class="description"><?php esc_html_e( 'Maximum purchase cards to display per single product load.', 'WooCommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Maximum purchase cards to display per single product load.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Maximum Purchase Age', 'WooCommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Maximum Purchase Age', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][maximum_purchase_age]" value="<?php echo esc_attr( $settings['general']['maximum_purchase_age'] ); ?>" min="0">
-										<span class="description"><?php esc_html_e( 'Ignore orders older than this amount of days (use 0 for no age restrictions).', 'WooCommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Ignore orders older than this amount of days (use 0 for no age restrictions).', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Interactive Behaviors', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Interactive Behaviors', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][pause_on_hover]" value="1" <?php checked( $settings['general']['pause_on_hover'], 1 ); ?>>
-											<?php esc_html_e( 'Pause display interval when customer hovers over notification card', 'WooCommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Pause display interval when customer hovers over notification card', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][dismiss_notifications]" value="1" <?php checked( $settings['general']['dismiss_notifications'], 1 ); ?>>
-											<?php esc_html_e( 'Allow customer to dismiss notification list (respects dismissals during browser session)', 'WooCommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Allow customer to dismiss notification list (respects dismissals during browser session)', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 									</div>
 								</div>
@@ -393,44 +393,44 @@ class Settings {
 						<!-- TAB 2: DISPLAY FIELDS -->
 						<div class="wcpn-tab-content" id="tab-display">
 							<div class="wcpn-card">
-								<h2><?php esc_html_e( 'Visible Fields & Custom Templates', 'woocommerce-purchase-notifications' ); ?></h2>
+								<h2><?php esc_html_e( 'Visible Fields & Custom Templates', 'WooCommerce-Purchase-Notifications' ); ?></h2>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Card Content Fields', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Card Content Fields', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<label>
 											<input type="checkbox" name="wcpn_settings[display][show_product_image]" value="1" <?php checked( $settings['display']['show_product_image'], 1 ); ?>>
-											<?php esc_html_e( 'Show Product Thumbnail', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Show Product Thumbnail', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[display][show_customer_name]" value="1" <?php checked( $settings['display']['show_customer_name'], 1 ); ?>>
-											<?php esc_html_e( 'Show Customer Name', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Show Customer Name', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[display][show_customer_location]" value="1" <?php checked( $settings['display']['show_customer_location'], 1 ); ?>>
-											<?php esc_html_e( 'Show Customer Location', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Show Customer Location', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[display][show_quantity]" value="1" <?php checked( $settings['display']['show_quantity'], 1 ); ?>>
-											<?php esc_html_e( 'Show Order Item Quantity', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Show Order Item Quantity', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[display][show_purchase_time]" value="1" <?php checked( $settings['display']['show_purchase_time'], 1 ); ?>>
-											<?php esc_html_e( 'Show Relative Time Ago', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Show Relative Time Ago', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[display][show_verified_badge]" value="1" <?php checked( $settings['display']['show_verified_badge'], 1 ); ?>>
-											<?php esc_html_e( 'Show Verified Purchase Badge', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Show Verified Purchase Badge', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Notification Template', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Notification Template', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<textarea name="wcpn_settings[display][custom_notification_template]" rows="3" class="large-text"><?php echo esc_textarea( $settings['display']['custom_notification_template'] ); ?></textarea>
 										<span class="description">
-											<?php esc_html_e( 'Customize notification wording. Placeholders: ', 'woocommerce-purchase-notifications' ); ?><br>
+											<?php esc_html_e( 'Customize notification wording. Placeholders: ', 'WooCommerce-Purchase-Notifications' ); ?><br>
 											<code>{customer_name}</code>, <code>{customer_location}</code>, <code>{quantity}</code>, <code>{product_name}</code>, <code>{time_ago}</code>
 										</span>
 									</div>
@@ -441,21 +441,21 @@ class Settings {
 						<!-- TAB 3: PRIVACY & GDPR -->
 						<div class="wcpn-tab-content" id="tab-privacy">
 							<div class="wcpn-card">
-								<h2><?php esc_html_e( 'GDPR Compliance & Data Obfuscation', 'woocommerce-purchase-notifications' ); ?></h2>
+								<h2><?php esc_html_e( 'GDPR Compliance & Data Obfuscation', 'WooCommerce-Purchase-Notifications' ); ?></h2>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'GDPR Anonymization Mode', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'GDPR Anonymization Mode', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<label class="wcpn-switch">
 											<input type="checkbox" name="wcpn_settings[privacy][gdpr_mode]" value="1" <?php checked( $settings['privacy']['gdpr_mode'], 1 ); ?>>
 											<span class="wcpn-slider"></span>
 										</label>
-										<span class="description"><?php esc_html_e( 'Strict GDPR compliance: all name anonymization and location processing is computed strictly server-side. No raw customer billing parameters are ever sent to the browser DOM.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Strict GDPR compliance: all name anonymization and location processing is computed strictly server-side. No raw customer billing parameters are ever sent to the browser DOM.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Customer Name Privacy', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Customer Name Privacy', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<select name="wcpn_settings[privacy][customer_name_mode]" id="wcpn-customer-name-mode">
 											<?php
@@ -465,12 +465,12 @@ class Settings {
 											}
 											?>
 										</select>
-										<span class="description"><?php esc_html_e( 'Choose how customer names are presented to website visitors.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Choose how customer names are presented to website visitors.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Location Settings', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Location Settings', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<select name="wcpn_settings[notification][customer_location_source]">
 											<?php
@@ -484,35 +484,35 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Location Fallback text', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Location Fallback text', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
-										<input type="text" name="wcpn_settings[notification][customer_location_fallback]" value="<?php echo esc_attr( $settings['notification']['customer_location_fallback'] ?? __( 'Unknown Location', 'woocommerce-purchase-notifications' ) ); ?>">
-										<span class="description"><?php esc_html_e( 'Placeholder used if the customer location is missing.', 'woocommerce-purchase-notifications' ); ?></span>
+										<input type="text" name="wcpn_settings[notification][customer_location_fallback]" value="<?php echo esc_attr( $settings['notification']['customer_location_fallback'] ?? __( 'Unknown Location', 'WooCommerce-Purchase-Notifications' ) ); ?>">
+										<span class="description"><?php esc_html_e( 'Placeholder used if the customer location is missing.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Global Privacy Overrides', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Global Privacy Overrides', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<label>
 											<input type="checkbox" name="wcpn_settings[privacy][anonymous_mode]" value="1" <?php checked( $settings['privacy']['anonymous_mode'], 1 ); ?>>
-											<?php esc_html_e( 'Anonymous Mode (Force "Someone" for all customer names)', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Anonymous Mode (Force "Someone" for all customer names)', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[privacy][hide_customer_names]" value="1" <?php checked( $settings['privacy']['hide_customer_names'], 1 ); ?>>
-											<?php esc_html_e( 'Hide Customer Names entirely', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Hide Customer Names entirely', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[privacy][hide_locations]" value="1" <?php checked( $settings['privacy']['hide_locations'], 1 ); ?>>
-											<?php esc_html_e( 'Hide Locations entirely', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Hide Locations entirely', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[privacy][hide_quantity]" value="1" <?php checked( $settings['privacy']['hide_quantity'], 1 ); ?>>
-											<?php esc_html_e( 'Hide Purchase Quantities', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Hide Purchase Quantities', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[privacy][hide_purchase_time]" value="1" <?php checked( $settings['privacy']['hide_purchase_time'], 1 ); ?>>
-											<?php esc_html_e( 'Hide Purchase Relative Time', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Hide Purchase Relative Time', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 									</div>
 								</div>
@@ -522,55 +522,55 @@ class Settings {
 						<!-- TAB 4: PRODUCT FILTERS -->
 						<div class="wcpn-tab-content" id="tab-filters">
 							<div class="wcpn-card">
-								<h2><?php esc_html_e( 'Product Exclusions', 'woocommerce-purchase-notifications' ); ?></h2>
-								<p class="section-desc"><?php esc_html_e( 'Configure rules to block purchase popups on specific product pages.', 'woocommerce-purchase-notifications' ); ?></p>
+								<h2><?php esc_html_e( 'Product Exclusions', 'WooCommerce-Purchase-Notifications' ); ?></h2>
+								<p class="section-desc"><?php esc_html_e( 'Configure rules to block purchase popups on specific product pages.', 'WooCommerce-Purchase-Notifications' ); ?></p>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Exclude Product IDs', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Exclude Product IDs', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[filters][exclude_products]" value="<?php echo esc_attr( $settings['filters']['exclude_products'] ); ?>">
-										<span class="description"><?php esc_html_e( 'Comma-separated list of WC Product IDs (e.g. 102, 154).', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Comma-separated list of WC Product IDs (e.g. 102, 154).', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Exclude Categories', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Exclude Categories', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[filters][exclude_categories]" value="<?php echo esc_attr( $settings['filters']['exclude_categories'] ); ?>">
-										<span class="description"><?php esc_html_e( 'Comma-separated list of category slugs or IDs (e.g. shoes, shirts).', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Comma-separated list of category slugs or IDs (e.g. shoes, shirts).', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Exclude Product Tags', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Exclude Product Tags', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[filters][exclude_tags]" value="<?php echo esc_attr( $settings['filters']['exclude_tags'] ); ?>">
-										<span class="description"><?php esc_html_e( 'Comma-separated list of tag slugs or IDs.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Comma-separated list of tag slugs or IDs.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Exclude Brands', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Exclude Brands', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[filters][exclude_brands]" value="<?php echo esc_attr( $settings['filters']['exclude_brands'] ); ?>">
-										<span class="description"><?php esc_html_e( 'Comma-separated list of brand slugs or IDs.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Comma-separated list of brand slugs or IDs.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Product Type Exclusions', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Product Type Exclusions', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<label>
 											<input type="checkbox" name="wcpn_settings[filters][exclude_out_of_stock]" value="1" <?php checked( $settings['filters']['exclude_out_of_stock'], 1 ); ?>>
-											<?php esc_html_e( 'Exclude Out of Stock Products', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Exclude Out of Stock Products', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[filters][exclude_virtual]" value="1" <?php checked( $settings['filters']['exclude_virtual'], 1 ); ?>>
-											<?php esc_html_e( 'Exclude Virtual Products', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Exclude Virtual Products', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[filters][exclude_downloadable]" value="1" <?php checked( $settings['filters']['exclude_downloadable'], 1 ); ?>>
-											<?php esc_html_e( 'Exclude Downloadable Products', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Exclude Downloadable Products', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 									</div>
 								</div>
@@ -580,10 +580,10 @@ class Settings {
 						<!-- TAB 5: ORDER FILTERS -->
 						<div class="wcpn-tab-content" id="tab-orders">
 							<div class="wcpn-card">
-								<h2><?php esc_html_e( 'Order Eligibility Filters', 'woocommerce-purchase-notifications' ); ?></h2>
+								<h2><?php esc_html_e( 'Order Eligibility Filters', 'WooCommerce-Purchase-Notifications' ); ?></h2>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Eligible Order Statuses', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Eligible Order Statuses', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<?php
 										$wc_statuses = wc_get_order_statuses();
@@ -599,27 +599,27 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Minimum Completed Orders', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Minimum Completed Orders', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[orders][minimum_completed_orders]" value="<?php echo esc_attr( $settings['orders']['minimum_completed_orders'] ); ?>" min="0">
-										<span class="description"><?php esc_html_e( 'Only display purchase notifications if the store has at least X total orders.', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Only display purchase notifications if the store has at least X total orders.', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Safety Filter Overrides', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Safety Filter Overrides', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<label>
 											<input type="checkbox" name="wcpn_settings[orders][ignore_refunded_orders]" value="1" <?php checked( $settings['orders']['ignore_refunded_orders'], 1 ); ?>>
-											<?php esc_html_e( 'Ignore Refunded Orders (Recommended)', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Ignore Refunded Orders (Recommended)', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[orders][ignore_failed_orders]" value="1" <?php checked( $settings['orders']['ignore_failed_orders'], 1 ); ?>>
-											<?php esc_html_e( 'Ignore Failed Orders (Recommended)', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Ignore Failed Orders (Recommended)', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[orders][ignore_cancelled_orders]" value="1" <?php checked( $settings['orders']['ignore_cancelled_orders'], 1 ); ?>>
-											<?php esc_html_e( 'Ignore Cancelled Orders (Recommended)', 'woocommerce-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Ignore Cancelled Orders (Recommended)', 'WooCommerce-Purchase-Notifications' ); ?>
 										</label>
 									</div>
 								</div>
@@ -629,10 +629,10 @@ class Settings {
 						<!-- TAB 6: APPEARANCE -->
 						<div class="wcpn-tab-content" id="tab-appearance">
 							<div class="wcpn-card">
-								<h2><?php esc_html_e( 'Appearance & Styles Customizer', 'woocommerce-purchase-notifications' ); ?></h2>
+								<h2><?php esc_html_e( 'Appearance & Styles Customizer', 'WooCommerce-Purchase-Notifications' ); ?></h2>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Animation Type', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Animation Type', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<select name="wcpn_settings[appearance][animation_type]" id="wcpn-setting-animation-type">
 											<?php
@@ -646,93 +646,93 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Background Color', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Background Color', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="wcpn-color-picker" name="wcpn_settings[appearance][background_color]" value="<?php echo esc_attr( $settings['appearance']['background_color'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Text Color', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Text Color', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="wcpn-color-picker" name="wcpn_settings[appearance][text_color]" value="<?php echo esc_attr( $settings['appearance']['text_color'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Accent / Link Color', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Accent / Link Color', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="wcpn-color-picker" name="wcpn_settings[appearance][accent_color]" value="<?php echo esc_attr( $settings['appearance']['accent_color'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Border Radius', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Border Radius', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text small-text" name="wcpn_settings[appearance][border_radius]" id="wcpn-setting-border-radius" value="<?php echo esc_attr( $settings['appearance']['border_radius'] ); ?>">
-										<span class="description"><?php esc_html_e( 'e.g. 12px or 50%', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'e.g. 12px or 50%', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Border Style', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Border Style', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[appearance][border]" id="wcpn-setting-border" value="<?php echo esc_attr( $settings['appearance']['border'] ); ?>">
-										<span class="description"><?php esc_html_e( 'e.g. 1px solid rgba(0,0,0,0.08) or none', 'woocommerce-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'e.g. 1px solid rgba(0,0,0,0.08) or none', 'WooCommerce-Purchase-Notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Shadow', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Shadow', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[appearance][shadow]" id="wcpn-setting-shadow" value="<?php echo esc_attr( $settings['appearance']['shadow'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Padding', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Padding', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text small-text" name="wcpn_settings[appearance][padding]" id="wcpn-setting-padding" value="<?php echo esc_attr( $settings['appearance']['padding'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Screen Margin Spacing', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Screen Margin Spacing', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text small-text" name="wcpn_settings[appearance][spacing]" id="wcpn-setting-spacing" value="<?php echo esc_attr( $settings['appearance']['spacing'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Typography Font Family', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Typography Font Family', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text" name="wcpn_settings[appearance][font_family]" id="wcpn-setting-font" value="<?php echo esc_attr( $settings['appearance']['font_family'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Font Size', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Font Size', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text small-text" name="wcpn_settings[appearance][font_size]" id="wcpn-setting-font-size" value="<?php echo esc_attr( $settings['appearance']['font_size'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Notification Width', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Notification Width', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text small-text" name="wcpn_settings[appearance][notification_width]" id="wcpn-setting-width" value="<?php echo esc_attr( $settings['appearance']['notification_width'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Thumbnail Size', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Thumbnail Size', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="text" class="regular-text small-text" name="wcpn_settings[appearance][image_size]" id="wcpn-setting-img-size" value="<?php echo esc_attr( $settings['appearance']['image_size'] ); ?>">
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Custom CSS', 'woocommerce-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Custom CSS', 'WooCommerce-Purchase-Notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<textarea name="wcpn_settings[appearance][custom_css]" rows="5" class="large-text"><?php echo esc_textarea( $settings['appearance']['custom_css'] ); ?></textarea>
 									</div>
@@ -745,8 +745,8 @@ class Settings {
 					<!-- Right Column: Interactive Live Notification Preview -->
 					<div class="wcpn-preview-column">
 						<div class="wcpn-sticky-preview-wrapper">
-							<h3><?php esc_html_e( 'Live Cards Preview', 'woocommerce-purchase-notifications' ); ?></h3>
-							<p class="preview-desc"><?php esc_html_e( 'Shows styling customizations in real-time as configurations change.', 'woocommerce-purchase-notifications' ); ?></p>
+							<h3><?php esc_html_e( 'Live Cards Preview', 'WooCommerce-Purchase-Notifications' ); ?></h3>
+							<p class="preview-desc"><?php esc_html_e( 'Shows styling customizations in real-time as configurations change.', 'WooCommerce-Purchase-Notifications' ); ?></p>
 							
 							<div class="wcpn-preview-stage">
 								<!-- The preview card wrapper -->
@@ -768,7 +768,7 @@ class Settings {
 											<svg class="wcpn-verified-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 												<polyline points="20 6 9 17 4 12"></polyline>
 											</svg>
-											<span><?php esc_html_e( 'Verified Purchase', 'woocommerce-purchase-notifications' ); ?></span>
+											<span><?php esc_html_e( 'Verified Purchase', 'WooCommerce-Purchase-Notifications' ); ?></span>
 										</div>
 									</div>
 									<button type="button" class="wcpn-preview-close" aria-label="Dismiss">&times;</button>
@@ -776,7 +776,7 @@ class Settings {
 							</div>
 							
 							<div class="wcpn-preview-controls">
-								<button type="button" class="button button-secondary" id="wcpn-btn-animate-preview"><?php esc_html_e( 'Test Animation', 'woocommerce-purchase-notifications' ); ?></button>
+								<button type="button" class="button button-secondary" id="wcpn-btn-animate-preview"><?php esc_html_e( 'Test Animation', 'WooCommerce-Purchase-Notifications' ); ?></button>
 							</div>
 						</div>
 					</div>
