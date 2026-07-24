@@ -1,4 +1,4 @@
-=== Antigravity Purchase Notifications for WooCommerce ===
+=== WooCommerce Purchase Notifications ===
 Contributors: Antigravity
 Tags: woocommerce, purchase notifications, social proof, conversion optimization, sales notifications, live notifications, popup
 Requires at least: 5.8
@@ -12,7 +12,7 @@ Boost your store conversion rates by showing authentic, elegant recent purchase 
 
 == Description ==
 
-Antigravity Purchase Notifications is a premium-quality, lightweight, and fully self-hosted social proof solution that displays authentic recent purchases on your product pages. 
+WooCommerce Purchase Notifications is a premium-quality, lightweight, and fully self-hosted social proof solution that displays authentic recent purchases on your product pages. 
 
 By leveraging native order history, the plugin generates floating purchase notification cards that prove to visitors that your store has active, satisfied buyers. 
 
@@ -28,7 +28,7 @@ By leveraging native order history, the plugin generates floating purchase notif
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/antigravity-purchase-notifications` directory, or install the plugin directly through the WordPress plugins screen.
+1. Upload the plugin files to the `/wp-content/plugins/WooCommerce-purchase-notifications` directory, or install the plugin directly through the WordPress plugins screen.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Navigate to WooCommerce -> Purchase Notifications to configure options.
 

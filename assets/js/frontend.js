@@ -1,5 +1,5 @@
 /**
- * Frontend JavaScript driver for antigravity-purchase-notifications
+ * Frontend JavaScript driver for WooCommerce-purchase-notifications
  */
 (function ($) {
 	'use strict';

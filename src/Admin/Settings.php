@@ -1,5 +1,5 @@
 <?php
-namespace AntigravityPurchaseNotifications\Admin;
+namespace WooCommercePurchaseNotifications\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -245,7 +245,7 @@ class Settings {
 		<div class="wrap wcpn-admin-wrap">
 			<div class="wcpn-dashboard-header">
 				<div class="wcpn-brand">
-					<h1><?php esc_html_e( 'Purchase Notifications', 'antigravity-purchase-notifications' ); ?></h1>
+					<h1><?php esc_html_e( 'Purchase Notifications', 'WooCommerce-purchase-notifications' ); ?></h1>
 					<span class="wcpn-version">v<?php echo esc_html( WCPN_VERSION ); ?></span>
 				</div>
 				<p class="wcpn-description"><?php esc_html_e( 'Display real-time recent order notifications to improve conversions using authentic shop data.', 'woocommerce-purchase-notifications' ); ?></p>
@@ -335,7 +335,7 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Display Delay', 'antigravity-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Display Delay', 'WooCommerce-purchase-notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][display_delay]" value="<?php echo esc_attr( $settings['general']['display_delay'] ); ?>" min="0">
 										<span class="description"><?php esc_html_e( 'Seconds to wait before showing the first notification card.', 'woocommerce-purchase-notifications' ); ?></span>
@@ -343,7 +343,7 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Rotation Interval', 'antigravity-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Rotation Interval', 'WooCommerce-purchase-notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][rotation_interval]" value="<?php echo esc_attr( $settings['general']['rotation_interval'] ); ?>" min="1">
 										<span class="description"><?php esc_html_e( 'Seconds to show each notification card before shifting to the next.', 'woocommerce-purchase-notifications' ); ?></span>
@@ -351,10 +351,10 @@ class Settings {
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Animation Speed', 'antigravity-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Animation Speed', 'WooCommerce-purchase-notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][animation_speed]" value="<?php echo esc_attr( $settings['general']['animation_speed'] ); ?>" min="100"> ms
-										<span class="description"><?php esc_html_e( 'Transition duration for entry and exit animations (default 500ms).', 'antigravity-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Transition duration for entry and exit animations (default 500ms).', 'WooCommerce-purchase-notifications' ); ?></span>
 									</div>
 								</div>
 
@@ -362,15 +362,15 @@ class Settings {
 									<label class="wcpn-label"><?php esc_html_e( 'Maximum Notifications', '' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][maximum_notifications]" value="<?php echo esc_attr( $settings['general']['maximum_notifications'] ); ?>" min="1">
-										<span class="description"><?php esc_html_e( 'Maximum purchase cards to display per single product load.', 'antigravity-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Maximum purchase cards to display per single product load.', 'WooCommerce-purchase-notifications' ); ?></span>
 									</div>
 								</div>
 
 								<div class="wcpn-field-row">
-									<label class="wcpn-label"><?php esc_html_e( 'Maximum Purchase Age', 'antigravity-purchase-notifications' ); ?></label>
+									<label class="wcpn-label"><?php esc_html_e( 'Maximum Purchase Age', 'WooCommerce-purchase-notifications' ); ?></label>
 									<div class="wcpn-input-wrapper">
 										<input type="number" class="small-text" name="wcpn_settings[general][maximum_purchase_age]" value="<?php echo esc_attr( $settings['general']['maximum_purchase_age'] ); ?>" min="0">
-										<span class="description"><?php esc_html_e( 'Ignore orders older than this amount of days (use 0 for no age restrictions).', 'antigravity-purchase-notifications' ); ?></span>
+										<span class="description"><?php esc_html_e( 'Ignore orders older than this amount of days (use 0 for no age restrictions).', 'WooCommerce-purchase-notifications' ); ?></span>
 									</div>
 								</div>
 
@@ -379,11 +379,11 @@ class Settings {
 									<div class="wcpn-input-wrapper wcpn-checkbox-list">
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][pause_on_hover]" value="1" <?php checked( $settings['general']['pause_on_hover'], 1 ); ?>>
-											<?php esc_html_e( 'Pause display interval when customer hovers over notification card', 'antigravity-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Pause display interval when customer hovers over notification card', 'WooCommerce-purchase-notifications' ); ?>
 										</label>
 										<label>
 											<input type="checkbox" name="wcpn_settings[general][dismiss_notifications]" value="1" <?php checked( $settings['general']['dismiss_notifications'], 1 ); ?>>
-											<?php esc_html_e( 'Allow customer to dismiss notification list (respects dismissals during browser session)', 'antigravity-purchase-notifications' ); ?>
+											<?php esc_html_e( 'Allow customer to dismiss notification list (respects dismissals during browser session)', 'WooCommerce-purchase-notifications' ); ?>
 										</label>
 									</div>
 								</div>
